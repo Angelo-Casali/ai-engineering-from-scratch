@@ -21,9 +21,9 @@ RUN python3.12 -m ensurepip --upgrade \
     && python -m pip install --no-cache-dir --upgrade pip setuptools wheel
 
 RUN python -m pip install --no-cache-dir \
-    torch==2.3.1 \
-    torchvision==0.18.1 \
-    torchaudio==2.3.1 \
+    torch \
+    torchvision \
+    torchaudio \
     --index-url https://download.pytorch.org/whl/cu124
 
 RUN python -m pip install --no-cache-dir \
