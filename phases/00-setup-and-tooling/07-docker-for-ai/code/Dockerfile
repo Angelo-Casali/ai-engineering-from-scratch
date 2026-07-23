@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
+FROM nvidia/cuda:12.8.1-devel-ubuntu22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
@@ -24,7 +24,7 @@ RUN python -m pip install --no-cache-dir \
     torch \
     torchvision \
     torchaudio \
-    --index-url https://download.pytorch.org/whl/cu124
+    --index-url https://download.pytorch.org/whl/cu128
 
 RUN python -m pip install --no-cache-dir \
     numpy \
@@ -33,7 +33,7 @@ RUN python -m pip install --no-cache-dir \
     matplotlib \
     jupyter \
     transformers \
-    datasets \
+    "datasets>=3.0.0" \
     accelerate \
     safetensors
 
