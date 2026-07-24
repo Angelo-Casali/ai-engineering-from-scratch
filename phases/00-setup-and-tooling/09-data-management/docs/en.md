@@ -45,7 +45,7 @@ pip install datasets huggingface_hub
 ```python
 from datasets import load_dataset
 
-dataset = load_dataset("imdb")
+dataset = load_dataset("stanfordnlp/imdb")
 print(dataset)
 print(dataset["train"][0])
 ```
